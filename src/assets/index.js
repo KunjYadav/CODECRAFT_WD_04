@@ -24,10 +24,11 @@ import threejs from "./tech/threejs.svg";
 import sharpener from "./company/sharpener.png";
 import handsInTechnology from "./company/handsInTechnology.png";
 
-import project1 from "./project1.png";
-import project2 from "./project2.png";
-import project3 from "./project3.png";
-import project4 from "./project4.png";
+import project1 from "./projects/project1.png";
+import project2 from "./projects/project2.png";
+import project3 from "./projects/project3.png";
+import project4 from "./projects/project4.png";
+import project5 from "./projects/project5.png";
 
 export {
   logo,
@@ -56,5 +57,6 @@ export {
   project1,
   project2,
   project3,
-  project4
+  project4,
+  project5,
 };
