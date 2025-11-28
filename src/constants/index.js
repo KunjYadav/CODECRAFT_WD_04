@@ -22,6 +22,7 @@ import {
   project3,
   project4,
   project5,
+  project6,
   threejs,
 } from "../assets";
 
@@ -223,6 +224,48 @@ const projects = [
     view: "https://temp-nextjs-store-draft-omega.vercel.app/",
   },
   {
+    name: "Chat App",
+    description:
+      "The website hosts a deployable, feature-rich AI chatbot application built with Next.js and Vercel. It uses a unified API to connect with advanced AI models (such as OpenAI's GPT-4, Google Gemini, and others) and comes with a compact client, multi-language interface, and a wide library of prompt templates for powerful and customizable conversations.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Clerk",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project3,
+    view: "https://chat-next-dusky.vercel.app/",
+  },
+  {
+    name: "Socially",
+    description:
+      "Socially is a social-style web application deployed on Vercel, likely built to showcase a modern social media or networking experience with posts, profiles, and interactive engagement features.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Prisma",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project4,
+    view: "https://socially-app-psi.vercel.app/",
+  },
+  {
     name: "Next-Gen E-Commerce",
     description:
       "It leverages modern web technologies Next.js and Tailwind CSS to deliver a seamless shopping experience. The site is optimized for speed, SEO, and dynamic content rendering, making it an excellent choice for online stores. It also supports integrations with various commerce providers, offering flexibility and scalability for businesses.",
@@ -240,29 +283,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project3,
+    image: project5,
     view: "https://ecommerce-next13js.vercel.app/",
-  },
-  {
-    name: "Image Gallery",
-    description:
-      "It offers users the ability to explore and download various pictures, catering to different themes and purposes. The site has a clean, user-friendly design, making it easy to browse through the images available.",
-    tags: [
-      {
-        name: "React.js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Axios",
-        color: "green-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: project4,
-    view: "https://kvite-images.netlify.app/",
   },
   {
     name: "Comfy Home Essentials",
@@ -282,7 +304,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project5,
+    image: project6,
     view: "https://kcomfy-store.netlify.app/",
   },
 ];
