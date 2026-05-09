@@ -1,36 +1,33 @@
-import { motion } from 'framer-motion';
-import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
-import kunj  from '../assets/kunj.jpg';
+import { motion } from "framer-motion";
+import ComputersCanvas from "./canvas/Computers";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
+    <section className='relative w-full h-screen mx-auto'>
+      <div className='absolute inset-0 top-[120px] max-w-7xl mx-auto sm:px-16 px-6 flex flex-row items-start gap-5'>
+        {/* Visual Line Decoration */}
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+          <div className='w-1 sm:h-80 h-40 bg-gradient-to-b from-[#915EFF] to-transparent' />
         </div>
 
+        {/* Intro Text */}
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915eff]'>Kunj</span>
+          <h1 className='font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2'>
+            Hi, I'm <span className='text-[#915EFF]'>Kunj</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Full stack web developer <br className='sm:block hidden' />
-            and UI/UX designer
+          <p className='text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2'>
+            I build scalable real-time applications{" "}
+            <br className='sm:block hidden' />
+            and interactive user interfaces.
           </p>
-        </div>
-
-        <div className='flex justify-center xl:h-auto md:h-[200px]'>
-          <img className='w-[250px] h-[200px] rounded-lg object-fit' src={kunj} alt="kunj" />
         </div>
       </div>
 
+      {/* 3D PC Model */}
       <ComputersCanvas />
 
+      {/* Animated Scroll Indicator at the bottom */}
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
@@ -41,7 +38,7 @@ const Hero = () => {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: 'loop',
+                repeatType: "loop",
               }}
               className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
