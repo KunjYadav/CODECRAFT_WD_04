@@ -11,6 +11,14 @@ import "slick-carousel/slick/slick-theme.css";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const ProjectCard = ({ index, name, description, tags, image, view }) => {
+  // Helper function to safely format the URL
+  const handleProjectClick = () => {
+    if (!view) return;
+    // Ensures the URL has http/https, otherwise Vercel treats it as a relative path
+    const url = view.startsWith("http") ? view : `https://${view}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -23,10 +31,11 @@ const ProjectCard = ({ index, name, description, tags, image, view }) => {
       >
         <div className='relative w-full h-[230px]'>
           <img
-            onClick={() => window.open(view, "_blank")}
+            onClick={handleProjectClick}
             src={image}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-xl'
+            alt={`${name} project`}
+            // Added cursor-pointer and relative z-10 so the click registers above the Tilt/Slider boundaries
+            className='w-full h-full object-cover rounded-xl cursor-pointer relative z-10 hover:opacity-80 transition-opacity'
           />
         </div>
 
@@ -37,8 +46,8 @@ const ProjectCard = ({ index, name, description, tags, image, view }) => {
               charLimit={50}
               readMoreText={"Read more ▼"}
               readLessText={"Read less ▲"}
-              readMoreClassName={"text-yellow-100"}
-              readLessClassName={"text-yellow-100"}
+              readMoreClassName={"text-yellow-100 cursor-pointer"}
+              readLessClassName={"text-yellow-100 cursor-pointer"}
             >
               {description}
             </ReactReadMoreReadLess>
