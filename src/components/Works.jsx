@@ -11,13 +11,12 @@ import "slick-carousel/slick/slick-theme.css";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const ProjectCard = ({ index, name, description, tags, image, view }) => {
-  // Helper function to safely format the URL
-  const handleProjectClick = () => {
-    if (!view) return;
-    // Ensures the URL has http/https, otherwise Vercel treats it as a relative path
-    const url = view.startsWith("http") ? view : `https://${view}`;
-    window.open(url, "_blank");
-  };
+  // Compute the URL safely
+  const projectUrl = view
+    ? view.startsWith("http")
+      ? view
+      : `https://${view}`
+    : "#";
 
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -29,19 +28,34 @@ const ProjectCard = ({ index, name, description, tags, image, view }) => {
         }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
-        <div className='relative w-full h-[230px]'>
+        <a
+          href={projectUrl}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='relative w-full h-[170px] cursor-pointer group block'
+        >
           <img
-            onClick={handleProjectClick}
             src={image}
             alt={`${name} project`}
-            // Added cursor-pointer and relative z-10 so the click registers above the Tilt/Slider boundaries
-            className='w-full h-full object-cover rounded-xl cursor-pointer relative z-10 hover:opacity-80 transition-opacity'
+            className='w-full h-full object-fit rounded-lg transition-all duration-300 group-hover:scale-105'
           />
-        </div>
+
+          {/* Hover Overlay - Smoother Blur and transition */}
+          <div className='absolute inset-0 flex justify-center items-center bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px]'>
+            <div className='flex flex-col items-center gap-2'>
+              <div className='w-10 h-10 rounded-full bg-white/20 flex items-center justify-center border border-white/50'>
+                <div className='w-2 h-2 rounded-full bg-white animate-ping' />
+              </div>
+              <p className='text-white font-medium text-[14px] uppercase tracking-wider'>
+                View Live Site
+              </p>
+            </div>
+          </div>
+        </a>
 
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[20px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>
+          <div className='mt-2 text-secondary text-[14px]'>
             <ReactReadMoreReadLess
               charLimit={50}
               readMoreText={"Read more ▼"}
@@ -51,7 +65,7 @@ const ProjectCard = ({ index, name, description, tags, image, view }) => {
             >
               {description}
             </ReactReadMoreReadLess>
-          </p>
+          </div>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>

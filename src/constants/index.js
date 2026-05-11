@@ -15,6 +15,7 @@ import {
   git,
   nextjs,
   vuejs,
+  threejs,
   sharpener,
   handsInTechnology,
   project1,
@@ -23,7 +24,12 @@ import {
   project4,
   project5,
   project6,
-  threejs,
+  project7,
+  project8,
+  project9,
+  project10,
+  project11,
+  project12,
 } from "../assets";
 
 export const navLinks = [
@@ -203,16 +209,16 @@ const projects = [
   },
 
   {
-    name: "Next.js Store Draft",
+    name: "Porter",
     description:
-      "Discover the cutting-edge of web design with our exclusive draft site. Here, innovation meets creativity as we showcase the potential of Next.js for building dynamic, high-performance online stores.",
+      "A streamlined logistics platform designed to simplify intra-city deliveries and movement of goods. Porter provides a user-friendly interface for booking mini-trucks and bikes, offering real-time tracking, transparent pricing, and efficient route optimization for both personal and business needs.",
     tags: [
       {
         name: "Nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "Supabase",
+        name: "Typescript",
         color: "green-text-gradient",
       },
       {
@@ -221,8 +227,9 @@ const projects = [
       },
     ],
     image: project2,
-    view: "https://temp-nextjs-store-draft-omega.vercel.app/",
+    view: "https://porter-local.vercel.app/",
   },
+
   {
     name: "Chat App",
     description:
@@ -244,6 +251,7 @@ const projects = [
     image: project3,
     view: "https://chat-next-dusky.vercel.app/",
   },
+
   {
     name: "Socially",
     description:
@@ -265,17 +273,18 @@ const projects = [
     image: project4,
     view: "https://socially-app-psi.vercel.app/",
   },
+
   {
-    name: "Next-Gen E-Commerce",
+    name: "Next.js Store Draft",
     description:
-      "It leverages modern web technologies Next.js and Tailwind CSS to deliver a seamless shopping experience. The site is optimized for speed, SEO, and dynamic content rendering, making it an excellent choice for online stores. It also supports integrations with various commerce providers, offering flexibility and scalability for businesses.",
+      "Discover the cutting-edge of web design with our exclusive draft site. Here, innovation meets creativity as we showcase the potential of Next.js for building dynamic, high-performance online stores.",
     tags: [
       {
-        name: "Next.js",
+        name: "Nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "Stripe",
+        name: "Supabase",
         color: "green-text-gradient",
       },
       {
@@ -284,8 +293,97 @@ const projects = [
       },
     ],
     image: project5,
-    view: "https://ecommerce-next13js.vercel.app/",
+    view: "https://temp-nextjs-store-draft-omega.vercel.app/",
   },
+
+  {
+    name: "Tech Agency",
+    description:
+      "A comprehensive management portal designed for tech agencies to streamline project tracking and client interactions. This application provides a centralized dashboard for managing internal operations, visualizing workflow progress, and improving overall organizational efficiency.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Socket.io",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project6,
+    view: "https://kunj-tech-agency-management-portal.vercel.app/",
+  },
+
+  {
+    name: "Analytics Dashboard",
+    description:
+      "A high-performance data visualization platform that transforms complex datasets into actionable insights. Featuring interactive charts, real-time data streaming, and customizable filters, this dashboard allows users to monitor key performance indicators (KPIs) and track trends through a clean, intuitive interface.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Chart.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project7,
+    view: "https://data-visualization-dashboard-client.vercel.app/",
+  },
+
+  {
+    name: "JobMatch AI",
+    description:
+      "An intelligent recruitment tool that leverages AI to bridge the gap between job seekers and employers. By analyzing resumes and job descriptions, it provides automated matching scores, skill gap analysis, and personalized career recommendations to streamline the hiring process.",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "OpenAI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project8,
+    view: "https://job-match-ai-rust.vercel.app/",
+  },
+
+  {
+    name: "Demo DAG LLM Pipeline",
+    description:
+      "An interactive visual builder for Large Language Model (LLM) workflows. It utilizes a Directed Acyclic Graph (DAG) interface to allow users to drag and drop nodes, connecting various AI models, prompts, and data processing steps to design complex automated pipelines.",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React-Flow",
+        color: "green-text-gradient", 
+      },
+      {
+        name: "LLM-Ops",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project9,
+    view: "https://demo-dag-llm.vercel.app/",
+  },
+
   {
     name: "Comfy Home Essentials",
     description:
@@ -304,8 +402,52 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: project6,
+    image: project10,
     view: "https://kcomfy-store.netlify.app/",
+  },
+
+  {
+    name: "Real-Time-Collaboration-Tool",
+    description:
+      "A dynamic platform designed for seamless teamwork, enabling multiple users to edit documents and share ideas in real-time. Featuring live cursor tracking, instant synchronization, and integrated chat, it ensures that every contributor stays on the same page regardless of location.",
+    tags: [
+      {
+        name: "Socket.io",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Redux-Toolkit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project11,
+    view: "https://real-time-collaboration-tool-backend.onrender.com/",
+  },
+
+  {
+    name: "Finance Dashboard",
+    description:
+      "A sophisticated financial management application that provides a holistic view of monetary assets and liabilities. It features real-time expense tracking, automated budget forecasting, and detailed transaction history, all presented through an elegant dark-themed interface for optimal readability and data analysis.",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Recharts",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project12,
+    view: "https://finance-dashboard-mock-ui.vercel.app/",
   },
 ];
 
