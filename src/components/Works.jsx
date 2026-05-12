@@ -5,10 +5,22 @@ import { styles } from "../styles";
 import SectionWrapper from "../hoc/SectionWrapper";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import ReactReadMoreReadLess from "react-read-more-read-less";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Pagination,
+  Navigation,
+  Autoplay,
+  EffectCoverflow,
+} from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
 
 const ProjectCard = ({ index, name, description, tags, image, view }) => {
   // Compute the URL safely
@@ -84,35 +96,6 @@ const ProjectCard = ({ index, name, description, tags, image, view }) => {
 };
 
 const Works = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 820,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -133,12 +116,44 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 gap-7'>
-        <Slider {...settings}>
+      <div className='w-full mt-10'>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+          }}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            // Responsive gaps
+            769: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1025: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
+          className='mySwiper py-10'
+        >
           {projects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
+            <SwiperSlide key={`project-${index}`} className='w-max'>
+              <ProjectCard {...project} />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
     </>
   );
