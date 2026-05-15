@@ -30,6 +30,7 @@ import {
   project10,
   project11,
   project12,
+  project13,
 } from "../assets";
 
 export const navLinks = [
@@ -373,7 +374,7 @@ const projects = [
       },
       {
         name: "React-Flow",
-        color: "green-text-gradient", 
+        color: "green-text-gradient",
       },
       {
         name: "LLM-Ops",
@@ -448,6 +449,28 @@ const projects = [
     ],
     image: project12,
     view: "https://finance-dashboard-mock-ui.vercel.app/",
+  },
+
+  {
+    name: "Next-Gen E-Commerce",
+    description:
+      "It leverages modern web technologies Next.js and Tailwind CSS to deliver a seamless shopping experience. The site is optimized for speed, SEO, and dynamic content rendering, making it an excellent choice for online stores. It also supports integrations with various commerce providers, offering flexibility and scalability for businesses.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Stripe",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: project13,
+    view: "https://ecommerce-next13js.vercel.app/",
   },
 ];
 
